@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sin Struggles and Prayers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .sin-selector {
+            margin-bottom: 20px;
+        }
+        .prayer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Find a Prayer for Your Struggles</h1>
+        <div class="sin-selector">
+            <label for="sin">Select the sin you're struggling with:</label>
+            <select id="sin">
+                <option value="">Select...</option>
+                <option value="addiction">Addiction</option>
+                <option value="anger">Anger</option>
+                <option value="envy">Envy</option>
+                <option value="lust">Lust</option>
+                <option value="pride">Pride</option>
+                <option value="greed">Greed</option>
+                <option value="sloth">Sloth</option>
+            </select>
+            <button onclick="showPrayer()">Show Prayer</button>
+        </div>
+        <div id="prayer" class="prayer"></div>
+    </div>
+
+    <script>
+        const prayers = {
+            addiction: "1 Corinthians 10:13: No temptation has overtaken you except what is common to mankind. And God is faithful; he will not let you be tempted beyond what you can bear. But when you are tempted, he will also provide a way out so that you can endure it.",
+            anger: "James 1:19-20: My dear brothers and sisters, take note of this: Everyone should be quick to listen, slow to speak and slow to become angry, because human anger does not produce the righteousness that God desires.",
+            envy: "Proverbs 14:30: A heart at peace gives life to the body, but envy rots the bones.",
+            lust: "Matthew 5:28: But I tell you that anyone who looks at a woman lustfully has already committed adultery with her in his heart.",
+            pride: "Proverbs 11:2: When pride comes, then comes disgrace, but with humility comes wisdom.",
+            greed: "Hebrews 13:5: Keep your lives free from the love of money and be content with what you have, because God has said, 'Never will I leave you; never will I forsake you.'",
+            sloth: "Proverbs 6:9-11: How long will you lie there, you sluggard? When will you get up from your sleep? A little sleep, a little slumber, a little folding of the hands to rest—and poverty will come on you like a thief and scarcity like an armed man."
+        };
+
+        function showPrayer() {
+            const sin = document.getElementById('sin').value;
+            const prayerText = prayers[sin] || "Please select a sin from the list above.";
+            document.getElementById('prayer').innerText = prayerText;
+        }
+    </script>
+</body>
+</html>
