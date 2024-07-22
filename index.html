@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christianity and Islam</title>
+    <title>Relegion</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -22,6 +22,11 @@
         .sin-selector {
             margin-bottom: 20px;
         }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
         .prayer {
             margin-top: 20px;
             padding: 10px;
@@ -33,7 +38,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Find a quote for your struggles :D </h1>
+        <h1>Find a Bible quote for your struggles :D </h1>
         <div class="sin-selector">
             <label for="sin">Select the sin you're struggling with:</label>
             <select id="sin">
@@ -46,8 +51,10 @@
                 <option value="greed">Greed</option>
                 <option value="sloth">Sloth</option>
             </select>
-            <button onclick="showPrayer()">Show Prayer</button>
-            <button onclick="switchToIslam()">I'm Islam</button>
+            <div class="buttons">
+                <button onclick="showPrayer()">Show Prayer</button>
+                <button onclick="switchToIslam()">I'm Islam</button>
+            </div>
         </div>
         <div id="prayer" class="prayer"></div>
     </div>
